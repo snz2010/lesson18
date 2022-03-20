@@ -1,0 +1,36 @@
+GET http://localhost:10001/movies/
+Accept: application/json
+###
+
+GET http://localhost:10001/movies/1
+Accept: application/json
+###
+
+DELETE http://localhost:10001/movies/1
+Content-Type: application/json
+###
+
+PUT http://localhost:10001/movies/1
+Content-Type: application/json
+
+{
+    "title": "New FILMNAME",
+    "rating": 3.3,
+    "genre_id": 18,
+    "description": "немало людей..."
+}
+
+###
+
+POST http://localhost:10001/movies/1
+Content-Type: application/json
+
+{
+    "director_id": 5,
+    "title": "FILMNAME",
+    "year": 1001,
+    "rating": 1.1,
+    "genre_id": 18,
+    "description": "немало ...",
+    "trailer": "https://www.you.com/"
+}
